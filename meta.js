@@ -14,7 +14,7 @@ module.exports = {
         type: "string",
         required: false,
         message: "Project description",
-        default: "Nuxt.js TypeScript project"
+        default: "Nuxt.js TypeScript Vuetify project"
       },
       author: {
         type: "string",

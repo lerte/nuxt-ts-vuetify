@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    Your public ip is: {{ip}}
+    Your public ip is: <span v-text="ip"></span>
   </v-card>
 </template>
 
