@@ -1,5 +1,5 @@
-const parseArgs = require("minimist")
-const argv = parseArgs(process.argv.slice(2), {
+import minimist from 'minimist'
+const argv = minimist(process.argv.slice(2), {
   alias: {
     H: "hostname",
     p: "port"
@@ -11,12 +11,15 @@ const argv = parseArgs(process.argv.slice(2), {
 const port = argv.port || process.env.PORT || process.env.npm_package_config_nuxt_port || "3000"
 const host = argv.hostname || process.env.HOST || process.env.npm_package_config_nuxt_host || "localhost"
 
-module.exports = {
+export default {
   env: {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`
   },
   head: {
-    title: '{{ name }}'
+    title: '{{ name }}',
+    link: [
+      { rel: 'stylesheet', href: '//fonts.loli.net/css?family=Roboto:300,400,500,700|Material+Icons' }
+    ]
   },
   /*
   ** Customize the progress-bar color
@@ -30,12 +33,11 @@ module.exports = {
   },
   css: ["~/assets/styles/main.styl"],
   modules: [
-    "@nuxtjs/pwa",
-    "@nuxtjs/axios",
+    ['@nuxtjs/pwa', { workbox: false } ],
     '@nuxtjs/vuetify'
   ],
-  axios: {},
   vuetify: {
+    materialIcons: false,
     theme: {
       primary: '#3f51b5',
       secondary: '#757de8',
