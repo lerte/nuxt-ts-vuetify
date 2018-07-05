@@ -1,4 +1,4 @@
-# Nuxt TS Vuetify
+# Nuxtify
 
 A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template with typescript and [Vuetify](https://vuetifyjs.com)
 
@@ -8,7 +8,7 @@ A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template with types
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
 ``` bash
-$ vue init lerte/nuxt-ts-vuetify my-project
+$ vue init lerte/nuxtify my-project
 $ cd my-project
 # install dependencies
 $ npm install # Or yarn install
